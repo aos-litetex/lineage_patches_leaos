@@ -1,7 +1,7 @@
-From 51477567bd408ccb00c6f21af8374b974824f746 Mon Sep 17 00:00:00 2001
+From 601e964491562c23238e5c1ee9e9a58b0de12206 Mon Sep 17 00:00:00 2001
 From: Raphael Mounier <mounierr07@gmail.com>
 Date: Fri, 27 Sep 2024 15:16:26 +0200
-Subject: [PATCH 14/14] folio: Add FlipFlap
+Subject: [PATCH 14/15] folio: Add FlipFlap
 
 For smartcover
 ---

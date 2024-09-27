@@ -1,7 +1,7 @@
-From 44daca50854afec2a164bb14fc9bb01e89086c17 Mon Sep 17 00:00:00 2001
+From 21f2ead6bcff90fd651a460da6850114d6552dce Mon Sep 17 00:00:00 2001
 From: Raphael Mounier <mounierr07@gmail.com>
 Date: Fri, 27 Sep 2024 14:57:47 +0200
-Subject: [PATCH 13/14] folio: add folio_daemon for huawei phone
+Subject: [PATCH 13/15] folio: add folio_daemon for huawei phone
 
 with minor change work also for smasung and google phone
 ---

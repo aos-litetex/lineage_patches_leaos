@@ -1,7 +1,7 @@
-From ba644254a91180f65b9ea74cabd7e09d29ed01b5 Mon Sep 17 00:00:00 2001
+From 8cbdf64a07174b71d208b19e605f10dc2f11b20b Mon Sep 17 00:00:00 2001
 From: Raphael Mounier <mounierr07@gmail.com>
 Date: Tue, 2 May 2023 09:31:43 +0200
-Subject: [PATCH 07/14] Change product_name to leaos
+Subject: [PATCH 07/15] Change product_name to leaos
 
 ---
  generate.sh | 2 +-

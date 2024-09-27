@@ -1,7 +1,7 @@
-From 1fb38c071863ac51c86d14639a2f328086c2753d Mon Sep 17 00:00:00 2001
+From 723ba59114752b0ef3eeed5499af0df9c810d8a5 Mon Sep 17 00:00:00 2001
 From: Raphael Mounier <mounierr07@gmail.com>
 Date: Sat, 29 Apr 2023 15:41:10 +0200
-Subject: [PATCH 04/14] Allow servicemanager to access hal_audio_sysbta
+Subject: [PATCH 04/15] Allow servicemanager to access hal_audio_sysbta
 
 Allow servicemanager to access hal_audio_sysbta
 Allow hal_audio_sysbta to read prop

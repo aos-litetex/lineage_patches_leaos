@@ -1,7 +1,7 @@
-From effb64efb7c8ac8d585fcd2d9b0645eeefaea4e3 Mon Sep 17 00:00:00 2001
+From ac3d3c6774490f8038321008d333981fa88cb059 Mon Sep 17 00:00:00 2001
 From: Raphael Mounier <mounierr07@gmail.com>
 Date: Sat, 28 Oct 2023 10:56:47 +0200
-Subject: [PATCH 09/14] huawei: fix various pb
+Subject: [PATCH 09/15] huawei: fix various pb
 
 Fix bug with :
 - gnss
