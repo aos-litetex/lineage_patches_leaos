@@ -1,7 +1,7 @@
-From 8f8190d2df1d8a12ad8a0d516b1f52cda9d57115 Mon Sep 17 00:00:00 2001
+From effb64efb7c8ac8d585fcd2d9b0645eeefaea4e3 Mon Sep 17 00:00:00 2001
 From: Raphael Mounier <mounierr07@gmail.com>
 Date: Sat, 28 Oct 2023 10:56:47 +0200
-Subject: [PATCH 09/11] huawei: fix various pb
+Subject: [PATCH 09/14] huawei: fix various pb
 
 Fix bug with :
 - gnss
@@ -13,10 +13,10 @@ Fix bug with :
  1 file changed, 16 insertions(+), 15 deletions(-)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index a716c9b..2e5ca9e 100644
+index ddd1735..bc2c142 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
-@@ -573,10 +573,6 @@ if [ -f /vendor/bin/hw/vendor.samsung.hardware.miscpower@1.0-service ] && [ "$vn
+@@ -575,10 +575,6 @@ if [ -f /vendor/bin/hw/vendor.samsung.hardware.miscpower@1.0-service ] && [ "$vn
      mount -o bind /system/phh/empty /vendor/bin/hw/android.hardware.power@1.0-service
  fi
  
@@ -27,7 +27,7 @@ index a716c9b..2e5ca9e 100644
  if busybox_phh unzip -p /vendor/app/ims/ims.apk classes.dex | grep -qF -e Landroid/telephony/ims/feature/MmTelFeature -e Landroid/telephony/ims/feature/MMTelFeature; then
      mount -o bind /system/phh/empty /vendor/app/ims/ims.apk
  fi
-@@ -585,10 +581,6 @@ if getprop ro.hardware | grep -qF exynos; then
+@@ -587,10 +583,6 @@ if getprop ro.hardware | grep -qF exynos; then
      setprop debug.sf.latch_unsignaled 1
  fi
  
@@ -38,7 +38,7 @@ index a716c9b..2e5ca9e 100644
  if getprop ro.vendor.product.device | grep -q -e nora -e rhannah; then
      setprop debug.sf.latch_unsignaled 1
  fi
-@@ -612,16 +604,25 @@ if getprop ro.vendor.build.fingerprint | grep -iq -e Redmi/rosemary \
+@@ -614,16 +606,25 @@ if getprop ro.vendor.build.fingerprint | grep -iq -e Redmi/rosemary \
      mount -o bind /system/phh/rosemary-excluded-input-devices.xml /system/etc/excluded-input-devices.xml
  fi
  

@@ -1,7 +1,7 @@
-From 9039087e9fdefe89ef8b55711562a97f78f2040f Mon Sep 17 00:00:00 2001
+From 87ce06a14b29084c6b74e45ad2691649e24dd64e Mon Sep 17 00:00:00 2001
 From: Raphael Mounier <mounierr07@gmail.com>
 Date: Sun, 29 Oct 2023 09:39:27 +0100
-Subject: [PATCH 11/11] treble : add dynamic securize , and some extra 
+Subject: [PATCH 11/14] treble : add dynamic securize , and some extra
  functions
 
 - Add Dynamic securize
@@ -49,7 +49,7 @@ index 472d16e..1c8b887 100644
  minijailSrc=/system/system_ext/apex/com.android.vndk.v28/lib/libminijail.so
  minijailSrc64=/system/system_ext/apex/com.android.vndk.v28/lib64/libminijail.so
 diff --git a/phh-prop-handler.sh b/phh-prop-handler.sh
-index 0b862d1..3719902 100644
+index 53ecde2..104f8f0 100644
 --- a/phh-prop-handler.sh
 +++ b/phh-prop-handler.sh
 @@ -258,19 +258,104 @@ if [ "$1" == "persist.bluetooth.system_audio_hal.enabled" ]; then

@@ -1,7 +1,7 @@
-From 45ce7dbf02df4dbd1409824f8305eebafb247a5f Mon Sep 17 00:00:00 2001
+From 0fc51ee713f5dc19130e4bf219b653a5641160e6 Mon Sep 17 00:00:00 2001
 From: Raphael Mounier <mounierr07@gmail.com>
 Date: Thu, 6 Jul 2023 10:11:59 +0200
-Subject: [PATCH 02/11] increase BT buffer to have multiple 16 frames
+Subject: [PATCH 02/14] increase BT buffer to have multiple 16 frames
 
 increase BT buffer to have multiple 16 frames to fix this warning
 
