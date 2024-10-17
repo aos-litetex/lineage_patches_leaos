@@ -1,0 +1,69 @@
+From 1759b79228ec4f0dfd17901e4a64533626d2574c Mon Sep 17 00:00:00 2001
+From: Raphael Mounier <mounierr07@gmail.com>
+Date: Sat, 12 Oct 2024 16:02:47 +0200
+Subject: [PATCH 14/14] huawei: add kirin fm radio
+
+---
+ base.mk            |  6 ++++++
+ sepolicy/huawei.te | 10 +++++++++-
+ system.prop        |  3 +++
+ 3 files changed, 18 insertions(+), 1 deletion(-)
+
+diff --git a/base.mk b/base.mk
+index 59bdf6c..3a62ebd 100644
+--- a/base.mk
++++ b/base.mk
+@@ -271,3 +271,9 @@ PRODUCT_PACKAGES += \
+ PRODUCT_COPY_FILES += \
+     device/phh/treble/folio/init.folio.rc:system/etc/init/init.folio.rc
+ 
++# FM
++PRODUCT_PACKAGES += \
++    FMApp2-Hisi \
++    libfm-kirin-emui9 \
++    hisi.fmradio
++
+diff --git a/sepolicy/huawei.te b/sepolicy/huawei.te
+index 104f639..a6675f1 100644
+--- a/sepolicy/huawei.te
++++ b/sepolicy/huawei.te
+@@ -38,6 +38,15 @@ allow init sys_block_mmcblk0:lnk_file read;
+ allow init sysfs_zram:lnk_file read;
+ 
+ 
++# --------------------- FM  ----------------------------------------
++type hal_fm_default, domain;
++allow platform_app default_hisi_hwservice:hwservice_manager { add find };
++allow platform_app hal_fm_default:binder { call };
++get_prop(hal_fm_default, default_prop)
++get_prop(hal_fm_default, config_prop)
++get_prop(hal_fm_default, system_prop)
++
++
+ # --------------------- Not need to boot but this rules are denied  ----------------------------------------
+ 
+ # Add support off splash2 Huawei logging
+@@ -192,7 +201,6 @@ get_prop(hal_audio_default, dft_syshwdebug_prop)
+ type cameradaemon_prop, property_type;
+ get_prop(priv_app, cameradaemon_prop)
+ 
+-
+ # Authorize a lot of process to read default, config and system prop
+ type hal_health_default, domain;
+ type hal_camera_default, domain;
+diff --git a/system.prop b/system.prop
+index f3c0c45..2c93832 100644
+--- a/system.prop
++++ b/system.prop
+@@ -47,5 +47,8 @@ bluetooth.profile.pan.panu.enabled?=true
+ bluetooth.profile.pbap.server.enabled?=true
+ bluetooth.profile.sap.server.enabled?=true
+ 
++# FM Radio
++ro.odm.config.fm.disable=false
++
+ # Samsung vendors default to a Samsung-specific gadget for MTP. Set this to use AOSP's functionfs MTP
+ vendor.usb.use_ffs_mtp=1
+-- 
+2.25.1
+

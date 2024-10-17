@@ -1,7 +1,7 @@
-From 1ae225e545f633a2a8a644bc9a216e9eec28eb2b Mon Sep 17 00:00:00 2001
+From 6bc822b3f80bfd4b2cd3d83e0d584907871a4feb Mon Sep 17 00:00:00 2001
 From: Raphael Mounier <mounierr07@gmail.com>
 Date: Sun, 29 Oct 2023 09:39:27 +0100
-Subject: [PATCH 11/15] treble : add dynamic securize , and some extra
+Subject: [PATCH 11/14] treble : add dynamic securize , and some extra
  functions
 
 - Add Dynamic securize
